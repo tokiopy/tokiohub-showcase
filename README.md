@@ -18,9 +18,9 @@ Web Apps · AI Agents · Workflow Automation · Mobile · Cloud · Security
 
 ## What is this?
 
-**TokioHub** is a selective digital agency based in Santo Domingo, Dominican Republic. We build custom software — AI agents, workflow automation systems, and web applications — for businesses that refuse to settle for templates.
+**TokioHub** is a selective digital agency based in Santo Domingo, Dominican Republic. We build AI agents, workflow automation systems, and custom web applications for businesses that refuse to settle for templates.
 
-The constraint is intentional: three new projects per month, no exceptions. Every client gets one engineer's full attention from spec to deploy.
+The constraint is intentional. Three new projects per month, no exceptions. Every client gets one engineer's full attention from spec to deploy.
 
 This repository is a **showcase**, a public portfolio of the agency's design, engineering, and product decisions. The source code is private.
 
@@ -30,7 +30,7 @@ This repository is a **showcase**, a public portfolio of the agency's design, en
 
 ## The Product
 
-TokioHub's own website is also a demonstration of what we sell. Every feature on the page — the live AI chat, the bilingual switcher, the scroll animations — is a working example of production-grade implementation, not a mockup.
+TokioHub's own website is also a demonstration of what we sell. Every feature on the page (the live AI chat, the bilingual switcher, the scroll animations) is a working example of production-grade implementation, not a mockup.
 
 ### 🤖 Live AI Agent Demo
 
@@ -40,13 +40,13 @@ The homepage features a real n8n-powered AI agent that responds in Spanish and E
 
 - **Webhook integration:** n8n handles routing, context management, and response formatting
 - **Session isolation:** each visitor gets a `crypto.randomUUID()` session ID, preventing conversation bleed across users
-- **Rate limiting:** 2-second cooldown between messages, 500-character input cap — client-side guards against abuse
+- **Rate limiting:** 2-second cooldown between messages, 500-character input cap. Client-side guards against abuse.
 - **Graceful degradation:** connection errors surface a localized fallback message instead of a broken UI
 - **Suggestion chips:** pre-built prompts guide new users into the conversation without a blank-slate moment
 
 ### 🌐 Bilingual Interface (ES/EN)
 
-The entire page switches language without a reload. Every visible string — navigation, headings, body copy, button labels, chat placeholder text, and even the AI greeting — is driven by a flat translation object.
+The entire page switches language without a reload. Every visible string (navigation, headings, body copy, button labels, chat placeholder text, and even the AI greeting) is driven by a flat translation object.
 
 - **Zero dependencies:** no i18n library, no router, no build step. One JS object, one `setLanguage()` function
 - **Persistent preference:** language state survives in-session navigation
@@ -54,7 +54,7 @@ The entire page switches language without a reload. Every visible string — nav
 
 ### 📱 Responsive Without Compromise
 
-Two different layouts coexist in the same HTML: CSS Grid desktops for services and automation sections, scroll-snap sliders for mobile. No layout breaks, no hidden overflow.
+Two different layouts coexist in the same HTML. CSS Grid on desktop for services and automation sections, scroll-snap sliders on mobile. No layout breaks, no hidden overflow.
 
 ![Mobile](screenshots/06-mobile.png)
 
@@ -67,10 +67,10 @@ Two different layouts coexist in the same HTML: CSS Grid desktops for services a
 
 Every section and card uses `IntersectionObserver` with staggered delays. No GSAP, no ScrollMagic, no dependency.
 
-- `threshold: 0.08` — triggers early enough to feel instant, late enough to avoid premature reveals
-- `rootMargin: '0px 0px -60px 0px'` — prevents reveals from firing at the very bottom of the viewport
+- `threshold: 0.08` triggers early enough to feel instant, late enough to avoid premature reveals
+- `rootMargin: '0px 0px -60px 0px'` prevents reveals from firing at the very bottom of the viewport
 - Stagger delays from `0.1s` to `0.6s` via utility classes
-- `prefers-reduced-motion` media query disables all animations entirely — no exceptions
+- `prefers-reduced-motion` media query disables all animations entirely, no exceptions
 
 ### 💬 Floating Chat Button
 
@@ -85,7 +85,7 @@ Three of TokioHub's past projects are featured on the homepage as case studies:
 ![Portfolio](screenshots/03-portfolio.png)
 
 ### ₿ Bitcoin Lab Bolivia
-Bitcoin education academy with Firebase Auth, Firestore-backed course progress, a real-time BTC/BOB calculator using Binance P2P data, an interactive business map (Leaflet + BTCMap), and Maxi — a Spanish-speaking AI agent with live price awareness. Built on shared PHP hosting with zero build step.
+Bitcoin education academy with Firebase Auth, Firestore-backed course progress, a real-time BTC/BOB calculator using Binance P2P data, an interactive business map (Leaflet + BTCMap), and Maxi, a Spanish-speaking AI agent with live price awareness. Built on shared PHP hosting with zero build step.
 
 → [See the showcase](https://github.com/tokiopy/bitcoinlab-bolivia-showcase) · [Live site](https://btclabbolivia.com/)
 
@@ -118,7 +118,7 @@ Community platform for a Dominican Republic crypto project. Modern design, AI as
 
 ### Frontend
 - **HTML5 + CSS3 + Vanilla JavaScript (ES6+):** no framework, no build pipeline
-- **CSS custom properties:** full design system in `:root` — colors, fonts, spacing, easing curves, max widths
+- **CSS custom properties:** full design system in `:root` with colors, fonts, spacing, easing curves, and max widths
 - **Google Fonts:** Space Grotesk (headings), Inter (body), JetBrains Mono (labels, data, code accents)
 - **No external JS dependencies:** animations, sliders, language switching, and scroll effects are all vanilla
 
@@ -135,9 +135,9 @@ Community platform for a Dominican Republic crypto project. Modern design, AI as
 
 ### 🎯 No-build architecture
 
-The site ships as static files. No webpack, no Vite, no npm install, no CI/CD pipeline. The entire site deploys with one FTP upload. This is not a limitation — it's a deliberate match between complexity and maintenance budget.
+The site ships as static files. No webpack, no Vite, no npm install, no CI/CD pipeline. The entire site deploys with one FTP upload. This is not a limitation. It's a deliberate match between complexity and maintenance budget.
 
-The tradeoff: no tree-shaking, no TypeScript, no module imports. The gain: zero build failures, zero dependency CVEs in the dependency graph, and a page that loads in under 2 seconds from cold cache.
+No tree-shaking, no TypeScript, no module imports. Zero build failures, zero dependency CVEs, and a page that loads in under 2 seconds from cold cache.
 
 ### 🌐 Flat translation system
 
@@ -147,11 +147,11 @@ No virtual DOM diffing. No reconciliation. No hydration. One function, one loop,
 
 ### 💬 AI chat security model
 
-The chat input applies two client-side guards: a 2-second rate limit between messages (`Date.now()` delta check) and a 500-character hard cap via `substring()`. Both are intentional UX constraints, not security measures — actual rate limiting and input validation happen at the n8n webhook level. Client-side guards exist to prevent accidental abuse from fast typists and to give users instant feedback on limits.
+The chat input applies two client-side guards: a 2-second rate limit between messages and a 500-character hard cap. Both are intentional UX constraints, not security measures. Actual rate limiting and input validation happen at the n8n webhook level. Client-side guards exist to prevent accidental abuse from fast typists and to give users instant feedback on limits.
 
 ### 📱 Two-layout responsive pattern
 
-Rather than adapting a single grid layout down to mobile, the services and automation sections ship two complete layouts: a CSS Grid version for desktop (`display: grid`) and a scroll-snap slider for mobile (`display: flex`, `overflow-x: auto`, `scroll-snap-type: x mandatory`). CSS `@media` queries toggle visibility between them. The duplication in HTML is the cost; the benefit is that neither layout is a compromise of the other.
+Rather than adapting a single grid layout down to mobile, the services and automation sections ship two complete layouts: a CSS Grid version for desktop and a scroll-snap slider for mobile. CSS `@media` queries toggle visibility between them. The duplication in HTML is the cost; the benefit is that neither layout is a compromise of the other.
 
 ### ⚡ IntersectionObserver scroll system
 
@@ -168,7 +168,7 @@ All scroll animations use a single shared observer instance with `{threshold: 0.
 | **Workflow Automation** | CRM, email, invoicing, and databases connected into one automated system |
 | **Mobile Apps** | Cross-platform, feels native, built to retain users |
 | **Cloud & DevOps** | Scales with traffic, zero-downtime deploys, monitoring that alerts before problems hit |
-| **Security** | Auth, encryption, access controls — your users' trust, intact |
+| **Security** | Auth, encryption, access controls. Your users' trust stays intact. |
 
 ---
 
@@ -196,7 +196,8 @@ TokioHub is a one-engineer agency. Every technical decision, design choice, and 
 - 🌐 **Agency:** [tokiohub.com](https://tokiohub.com/)
 - 💬 **GitHub:** [@tokiopy](https://github.com/tokiopy)
 - 🐦 **X:** [@tokiobtc](https://x.com/tokiobtc)
-- 📱 **WhatsApp:** [+1-809-586-9999](https://wa.me/18095869999)
+- 📧 **Email:** info@tokiohub.com
+- 📱 **WhatsApp:** [+1-809-852-4542](https://wa.me/18098524542)
 
 ---
 
