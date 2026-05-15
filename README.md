@@ -10,6 +10,8 @@ Web Apps · AI Agents · Workflow Automation · Mobile · Cloud · Security
 [![Status](https://img.shields.io/badge/Status-Production-22c55e?style=for-the-badge)](https://tokiohub.com/)
 [![License](https://img.shields.io/badge/Showcase-MIT-blue?style=for-the-badge)](#license)
 
+![Hero](screenshots/01-hero.png)
+
 </div>
 
 ---
@@ -34,6 +36,8 @@ TokioHub's own website is also a demonstration of what we sell. Every feature on
 
 The homepage features a real n8n-powered AI agent that responds in Spanish and English, understands context, and can discuss the agency's services in detail. It's not a canned FAQ bot. It's the same architecture deployed for clients.
 
+![AI Demo](screenshots/02-ai-demo.png)
+
 - **Webhook integration:** n8n handles routing, context management, and response formatting
 - **Session isolation:** each visitor gets a `crypto.randomUUID()` session ID, preventing conversation bleed across users
 - **Rate limiting:** 2-second cooldown between messages, 500-character input cap — client-side guards against abuse
@@ -51,6 +55,8 @@ The entire page switches language without a reload. Every visible string — nav
 ### 📱 Responsive Without Compromise
 
 Two different layouts coexist in the same HTML: CSS Grid desktops for services and automation sections, scroll-snap sliders for mobile. No layout breaks, no hidden overflow.
+
+![Mobile](screenshots/06-mobile.png)
 
 - **Services section:** 3-column grid on desktop, snap-scrollable card carousel on mobile with dot indicators
 - **Automation section:** same pattern, independently controlled
@@ -76,6 +82,8 @@ A fixed chat button pulses in the corner when the AI demo section is off-screen.
 
 Three of TokioHub's past projects are featured on the homepage as case studies:
 
+![Portfolio](screenshots/03-portfolio.png)
+
 ### ₿ Bitcoin Lab Bolivia
 Bitcoin education academy with Firebase Auth, Firestore-backed course progress, a real-time BTC/BOB calculator using Binance P2P data, an interactive business map (Leaflet + BTCMap), and Maxi — a Spanish-speaking AI agent with live price awareness. Built on shared PHP hosting with zero build step.
 
@@ -94,6 +102,10 @@ Community platform for a Dominican Republic crypto project. Modern design, AI as
 ---
 
 ## Tech Stack
+
+![Services](screenshots/04-services.png)
+
+![Automation](screenshots/05-automation.png)
 
 <div align="center">
 
